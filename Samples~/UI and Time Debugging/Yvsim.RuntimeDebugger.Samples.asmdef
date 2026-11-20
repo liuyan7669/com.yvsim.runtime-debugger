@@ -1,0 +1,8 @@
+{
+  "name": "Yvsim.RuntimeDebugger.Samples",
+  "rootNamespace": "Yvsim.RuntimeDebugger.Samples",
+  "references": [
+    "Yvsim.RuntimeDebugger",
+    "UnityEngine.UI"
+  ]
+}

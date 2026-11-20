@@ -1,0 +1,38 @@
+{
+  "name": "com.yvsim.runtime-debugger",
+  "version": "1.0.0",
+  "displayName": "Runtime Debugger",
+  "description": "面向开发与功能测试的运行时快捷调试工具，包含时间变速和可定位、可触发交互的 UGUI 检查器。\n\n主要功能：\n1. 按住快捷键临时修改 Time.timeScale 并在松开后恢复，或每次按键在默认/目标速度之间切换。\n2. 以 IMGUI 面板检查最前方或所有已打开界面的 Button、Toggle 及自定义快捷目标。\n3. 显示层级路径、交互状态、区域边框和自动分配的快捷键，从面板或键盘直接触发操作。\n4. 支持闪烁定位、自动刷新、包含未激活组件及过滤被前层界面遮挡的组件。\n5. 通过接口标记检查根节点与自定义交互组件，不要求继承特定 UI 框架。\n\n使用说明：快捷键使用传统 Input Manager；时间变速默认只在 Windows Editor 生效，可显式允许 Player 使用。依赖 Inspector Groups，适合作为测试工具，附带自动生成按钮与计时界面的示例。",
+  "unity": "2021.3",
+  "author": {
+    "name": "Yvsim"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "com.unity.ugui": "1.0.0",
+    "com.yvsim.inspector-groups": "1.0.0"
+  },
+  "keywords": [
+    "debug",
+    "runtime",
+    "ui",
+    "time-scale"
+  ],
+  "samples": [
+    {
+      "displayName": "UI and Time Debugging",
+      "description": "将 RuntimeDebuggerExample 添加到空场景物体，运行时创建按钮、Toggle、计时文本和检查根节点；按 F2 打开检查器，练习快捷触发、定位、界面刷新与可恢复的时间变速。",
+      "path": "Samples~/UI and Time Debugging"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liuyan7669/com.yvsim.runtime-debugger.git"
+  },
+  "documentationUrl": "https://github.com/liuyan7669/com.yvsim.runtime-debugger#readme",
+  "changelogUrl": "https://github.com/liuyan7669/com.yvsim.runtime-debugger/blob/main/CHANGELOG.md",
+  "bugs": {
+    "url": "https://github.com/liuyan7669/com.yvsim.runtime-debugger/issues"
+  },
+  "licensesUrl": "https://github.com/liuyan7669/com.yvsim.runtime-debugger/blob/main/LICENSE.md"
+}
