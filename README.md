@@ -44,7 +44,7 @@
 
 也可以将两个完整包目录分别放入项目的 `Packages/com.yvsim.inspector-groups` 和 `Packages/com.yvsim.runtime-debugger`，作为 Embedded Packages 使用。不要再为这两个嵌入包添加指向不存在远端版本的依赖项。
 
-本说明不代表 Git Tag 或 OpenUPM 的 `1.0.0` 已发布；发布完成前请使用上述本地源码安装方式。
+本包提供本地源码、Git 和 OpenUPM 安装方式；固定版本使用 `1.0.0`，具体步骤见下文。
 
 ## 时间变速快捷键
 
@@ -184,4 +184,22 @@ public class CustomShortcutTarget : MonoBehaviour, IUIRuntimeInspectorShortcutTa
 https://github.com/liuyan7669/com.yvsim.runtime-debugger.git#main
 ```
 
-此地址指向 main 分支，当前包版本为 1.0.0。本次上传不创建版本 tag 或 GitHub Release，也不代表已在 OpenUPM 登记；Unity 官方依赖仍按 package.json 解析。
+此地址跟随 main 分支。需要固定 1.0.0 源码时，将 `#main` 改为 `#v1.0.0`；Unity 官方依赖仍按 package.json 解析。
+
+## 从 OpenUPM 安装
+
+在 Unity 的 Project Settings > Package Manager 中添加 Scoped Registry：
+
+- Name：OpenUPM
+- URL：`https://package.openupm.com`
+- Scope：`com.yvsim`
+
+然后在 Package Manager 中通过 Add package by name 输入 `com.yvsim.runtime-debugger`，版本填 `1.0.0`。也可从 My Registries 中选择本包。声明的 Yvsim 依赖由 OpenUPM 解析，Unity 官方依赖仍由 Unity 注册表提供。
+
+如果已安装 OpenUPM CLI，可在工程根目录执行：
+
+```sh
+openupm add com.yvsim.runtime-debugger@1.0.0
+```
+
+[OpenUPM 包页面](https://openupm.com/packages/com.yvsim.runtime-debugger/)
